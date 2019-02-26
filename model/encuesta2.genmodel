@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Encuesta2/src-gen" creationIcons="false" editDirectory="/Encuesta2.edit/src-gen"
+    editorDirectory="/Encuesta2.editor/src-gen" modelPluginID="Encuesta2" modelName="Encuesta2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>encuesta2.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Encuesta2" disposableProviderFactory="true" ecorePackage="encuesta2.ecore#/">
+    <genClasses ecoreClass="encuesta2.ecore#//Encuesta">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Encuesta/modulos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Encuesta/navegacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute encuesta2.ecore#//Encuesta/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="encuesta2.ecore#//Modulo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Modulo/preguntas"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute encuesta2.ecore#//Modulo/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Modulo/nodos"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="encuesta2.ecore#//Pregunta">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Pregunta/opciones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute encuesta2.ecore#//Pregunta/enunciado"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute encuesta2.ecore#//Pregunta/prefijo"/>
+    </genClasses>
+    <genClasses ecoreClass="encuesta2.ecore#//Unica"/>
+    <genClasses ecoreClass="encuesta2.ecore#//Multiple"/>
+    <genClasses ecoreClass="encuesta2.ecore#//Abierta"/>
+    <genClasses image="false" ecoreClass="encuesta2.ecore#//Elemento"/>
+    <genClasses ecoreClass="encuesta2.ecore#//Navegacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Navegacion/desde"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference encuesta2.ecore#//Navegacion/hacia"/>
+    </genClasses>
+    <genClasses ecoreClass="encuesta2.ecore#//OpcionRespuesta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute encuesta2.ecore#//OpcionRespuesta/valor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="encuesta2.ecore#//Nodo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute encuesta2.ecore#//Nodo/texto"/>
+    </genClasses>
+    <genClasses ecoreClass="encuesta2.ecore#//NodoInicio"/>
+    <genClasses ecoreClass="encuesta2.ecore#//NodoFin"/>
+  </genPackages>
+</genmodel:GenModel>
